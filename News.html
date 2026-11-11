@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Navigation -->
+        <nav class="navigation">
+            <div class="menu-container">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="Recipes.html">Recipes</a>
+                    </li>
+                    <li>
+                        <a href="Search.html">Search</a>
+                    </li>
+                    <li>
+                        <a href="News.html">Food news and Trends</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hamburger-menu">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+	                    <path d="M0 0h512v512H0z" fill="none" />
+	                    <path fill="currentColor" d="M80 96h352v32H80zm0 144h352v32H80zm0 144h352v32H80z" />
+                    </svg>
+                 </span>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="recipe-detail.html">Recipes</a>
+                    </li>
+                    <li>
+                        <a href="search.html">Search</a>
+                    </li>
+                    <li>
+                        <a href="saved-recipes.html">Saved Recipes</a>
+                    </li>
+                </ul>
+        </div>
+
+        <!-- Header -->
+        <header class="news-header">
+            <h1>Food news and Trends</h1>
+            <h2>Stay up-to-date on food news, recalls, new products and reviews</h2>
+
+            <div class="news-toolbar">
+                <div class="search-box">
+                    <span class="search-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="m15 15l6 6m-11-4a7 7 0 1 1 0-14a7 7 0 0 1 0 14" />
+                        </svg>
+                    </span>
+                    <input type="text" placeholder="Search" class="search-input">
+                </div>
+                <button type="button" class="filter-button" id="filter-open" aria-label="Filter news">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M3 5h18l-7 8v6l-4 2v-8z" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Filter popup -->
+        <dialog class="filter-popup" id="filter-popup">
+            <form method="dialog">
+                <h3>Filter by category</h3>
+                <label><input type="radio" name="news-category" checked> All</label>
+                <label><input type="radio" name="news-category"> Celebrity &amp; Entertainment</label>
+                <label><input type="radio" name="news-category"> Fast Food</label>
+                <label><input type="radio" name="news-category"> Grocery</label>
+                <label><input type="radio" name="news-category"> Recalls</label>
+                <label><input type="radio" name="news-category"> Taste Tests</label>
+                <label><input type="radio" name="news-category"> Trends</label>
+                <div class="filter-popup_actions">
+                    <button value="cancel">Close</button>
+                    <button value="apply">Apply</button>
+                </div>
+            </form>
+        </dialog>
+
+        <!-- Banner -->
+        <a href="https://www.apple.com/dk/app-store/" target="_blank" class="small-banner">
+            Never miss out on new recipes. Download the app →
+        </a>
+
+    <!-- Categories -->
+    <div class="news-category">
+        <nav class="category-menu">
+            <a href="#">Celebrity & Entertainment</a>
+            <a href="#">Fast Food</a>
+            <a href="#">Grocery</a>
+            <a href="#">Recalls</a>
+            <a href="#">Taste Tests</a>
+            <a href="#">Trends</a>
+        </nav>
+    </div>
+
+    <!-- News section -->
+    <section class="news-list">
+
+        <article class="todays_recipes_content_block">
+            <div class="todays_recipes_content_block_image">
+                <img src="https://picsum.photos/300/175?1" alt="Food news">
+            </div>
+            <div class="todays_recipes_content_block_text">
+                <p data-category="TRENDS" id="category-color">TRENDS</p>
+                <h3>The Magic 3 Ingredient Something Something</h3>
+            </div>
+        </article>
+
+        <article class="todays_recipes_content_block">
+            <div class="todays_recipes_content_block_image">
+                <img src="https://picsum.photos/300/175?2" alt="Food news">
+            </div>
+            <div class="todays_recipes_content_block_text">
+                <p data-category="FAST FOOD" id="category-color">FAST FOOD</p>
+                <h3>What's New in the World of Fast Food?</h3>
+            </div>
+        </article>
+
+        <article class="todays_recipes_content_block">
+            <div class="todays_recipes_content_block_image">
+                <img src="https://picsum.photos/300/175?3" alt="Food news">
+            </div>
+            <div class="todays_recipes_content_block_text">
+                <p data-category="GROCERY" id="category-color">GROCERY</p>
+                <h3>New Products Worth Trying This Month</h3>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- Footer -->
+<div class="footer">
+            <div class="footer_content">
+                <div class="footer_social">
+                     <a href="#">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3" /><path d="M10 9.5v5l4.5-2.5z" /></svg>
+                         YouTube
+                     </a>
+                     <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" /></svg>
+                         Instagram
+                     </a>
+                      <a href="#">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M14 20v-7h2.5l.5-3H14V8.5c0-.9.3-1.5 1.5-1.5H17V4.3C16.7 4.3 15.8 4.2 14.8 4.2c-2.2 0-3.8 1.3-3.8 3.8V10H8.5v3H11v7" /></svg>
+                         Facebook
+                     </a>
+                </div>      
+
+                <div class="footer_nav">
+                    <a href="index.html">Home</a>
+                    <a href="recipe-detail.html">Recipe</a>
+                    <a href="#">About</a>
+                </div>
+                <div class="footer_info">
+                    <a href="#">https://open.spotify.com/track/4gRA0i5sxx3jAhHaVjPnUN?si=aaba07b09223416c</a>
+                    <a href="#">https://open.spotify.com/album/6Xuu2z00jxRPZei4IJ9neK</a>
+                    <p class="footer_renewable">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M8.5 15.5c0-4 3-6.5 7-6.5c0 4-2.5 7-7 6.5zM8.5 15.5l3-3" /></svg>
+                        <span>Etsy is powered by 100% renewable electricity.</span>
+                    </p>
+                </div>
+            </div>
+         </div>
+    </div> 
+    
+    
+
+    <script>
+        const popup = document.getElementById('filter-popup');
+        document.getElementById('filter-open').addEventListener('click', () => popup.showModal());
+    </script>
+</body>
+</html>
